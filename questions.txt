@@ -13,7 +13,7 @@ Where would you move if you were forced to leave the country?
 If you could meet anyone alive today, who would it be?
 What is the biggest risk you have taken?
 What will you name your next child (or pet)?
-What is something you’re too old to do, but enjoy anyway?
+What is something that usually only young people do that you enjoy doing regardless?
 What is one of your pet peeves?
 Who is the messiest person you’ve known?
 Which smells better: fresh-cut grass or fresh-baked bread?
@@ -95,7 +95,7 @@ When was the last time you screwed something up but no one noticed?
 Have you kept a journal before?
 What do you usually daydream about?
 If you could only listen to one piece of music for the rest of your life, what would it be?
-What are three things you always forget?
+What are three things you can never remember?
 What is your most beautiful facial feature?
 What is the strangest thing on your bucket list?
 Have you ever pulled out a tooth just to get money from the tooth fairy?
@@ -229,3 +229,110 @@ How do you feel about garden gnomes and pink flamingos in people’s yards?
 What is the longest plane trip you’ve taken?
 What is the most severe weather event you’ve experienced?
 What habits are preventing you from achieving your goals?
+What is something that is not true about you, but your friends might believe is true if you told them?
+What do you like to wear when you’re at home by yourself?
+What is an investment that you made recently?
+What is your favourite material object that you own?
+What kind of company would you start if you were given $50,000 to start one?
+For a day, would you rather be a hobbit or an elf?
+What was your favourite childhood snack?
+What is your favourite month?
+Which continent will be the next one you travel to?
+Have you ever walked out of a theatre before the end of the movie or show?
+What strange food combinations do you enjoy?
+What food have you never eaten but really want to try?
+Where do you get your news?
+What movie can you watch over and over without getting tired of?
+How many times a day do you have caffeine?
+How bad do you have to feel before you’ll take a sick day?
+What device would be the most annoying if it played loud upbeat music while being used?
+When did something start out badly for you but ended up great?
+Which animal would be the cutest if it was scaled down to the size of a house cat?
+If your work gave you a surprise three day paid break to rest and recuperate, what would you do with those three days?
+What is an unintuitive fact that you know?
+What is the best or worst practical joke that you played on someone or that was played on you?
+Where do you get your home furnishings and decor from?
+What food is delicious but difficult or awkward to eat?
+Who was your craziest or most interesting teacher?
+What “old person” things do you do?
+What was the last photo you took?
+What is the most amazing slow motion video you’ve seen?
+What is the spiciest thing you’ve ever eaten?
+What is the most expensive thing you’ve broken?
+What is your cure for hiccups?
+What is an invention that goes unnoticed but has greatly improved the world?
+What is the most interesting building you’ve seen or been inside?
+What mythical creature do you wish actually existed?
+If someone narrated your life, who would you want to be the narrator?
+What are you interested in that most people aren’t?
+What smartphone feature would you be excited for a company to implement?
+What is something people don’t seem to worry about but probably should?
+What movie quotes do you use on a regular basis?
+Do you think that children born today will have shorter or longer life expectancies than their parents?
+Which charity or charitable cause is most deserving of money?
+What TV show character would it be the most fun to change places with for a week?
+What was cool when you were young but isn’t cool now?
+If you were moving to another country, but could only pack one carry-on sized bag, what would you pack?
+If magic was real, what spell would you try to learn first?
+What goal do you think humanity is not focused enough on achieving?
+What problem are you currently grappling with?
+What game have you spent the most hours playing?
+What is the most comfortable bed or chair you’ve ever been in?
+What is the hardest thing you’ve ever worked at?
+What movie, picture, or video always makes you laugh no matter how often you watch it?
+What artist or band do you always recommend when someone asks for a music recommendation?
+If you could have an all-expenses paid trip to see any famous world monument, which monument would you choose?
+What is the coldest weather you’ve ever been in?
+Which protagonist from a book or movie would make the worst roommate?
+Do you eat food that’s past its expiration date if it still smells and looks fine?
+What is the most ridiculous thing you have bought?
+What outdoor activity haven’t you tried, but would like to?
+What songs make you feel nostalgia every time you hear them?
+What is the most interesting documentary you’ve watched?
+What was the last song you sang along to?
+If you were given five million dollars to open a small museum, what kind of museum would you make?
+Which of your vices or bad habits would be the hardest to give up?
+What really needs to be modernized?
+When was the last time you slept more than nine hours?
+How comfortable are you speaking in front of large groups of people?
+What would be the best thing you could reasonably expect to find in a cave?
+What bit of trivia do you know that is very interesting but also very useless?
+What animal or plant do you think should be renamed?
+As a child, what did you think would be awesome about being an adult, but isn’t as awesome as you thought it would be?
+What is the most boring superhero you can come up with?
+What word is a lot of fun to say?
+What current trend do you hope will go on for a long time?
+What restaurant do you take visitors from out of town in order to impress them?
+What languages do you wish you could speak?
+What is the most pleasant sounding accent?
+What is something that everyone—absolutely everyone—in the entire world can agree on?
+What is the funniest word in the English language?
+What is some insider knowledge that only people in your line of work have?
+Who do you wish you could get back into contact with?
+How do you make yourself sleep when you’re having trouble sleeping?
+What are some of the best vacations you’ve had?
+What’s a story you could tell that starts with “Back in my day, we used to…”?
+What is the worst hairstyle you’ve had?
+What habit do you have now that you wish you started much earlier?
+If you were given one thousand acres of land that you didn’t need to pay taxes on but couldn’t sell, what would you do with it?
+What life skills are rarely taught but are extremely useful?
+What movie universe would be the worst to live out your life in?
+Who do you feel like you know even though you’ve never met them?
+What is the worst thing you’ve eaten out of politeness?
+What happens in your country regularly that people in other countries would find strange?
+What is your funniest story involving a car?
+What would be the click-bait titles of some popular movies?
+If you built a themed hotel, what would the theme be and what would the rooms look like?
+What scientific discovery would change the course of humanity overnight if it was discovered?
+What is the grossest food that you just can’t get enough of?
+What brand are you most loyal to?
+What movie or book do you know the most quotes from?
+What was one of the most interesting concerts you’ve been to?
+What is the most recent show you’ve binge-watched?
+What is a common experience for many people that you’ve never experienced?
+What are some misconceptions about your hobby?
+What is the smartest thing you’ve seen an animal do?
+What is the most annoying noise?
+What is the last thing that you Googled?
+If money and practicality weren’t an issue, what would be the most interesting way to get around town?
+What is the most frustrating product you own?

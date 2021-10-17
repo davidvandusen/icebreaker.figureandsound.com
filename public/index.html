@@ -18,7 +18,7 @@
     }
 
     a {
-      color: #3d55b5;
+      color: #0077b6;
       text-decoration: none;
     }
 
@@ -46,6 +46,7 @@
 
     h1 {
       font-size: 1rem;
+      font-weight: 900;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
@@ -57,6 +58,11 @@
     h3 {
       font-size: 1rem;
       margin-top: 3rem;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
     }
 
     .page {
@@ -131,7 +137,7 @@
       <input id="team-name-input" />
     </p>
     <h3>Which days do you need questions for?</h3>
-    <ol>
+    <ol class="checklist">
       <li><label><input id="sunday-input" type="checkbox" /> Sundays</label></li>
       <li><label><input id="monday-input" type="checkbox" /> Mondays</label></li>
       <li><label><input id="tuesday-input" type="checkbox" /> Tuesdays</label></li>
@@ -163,7 +169,7 @@
 </main>
 <script>
   (function () {
-    var numberOfQuestions = 231;
+    var numberOfQuestions = 338;
     var questionTextArea = document.getElementById('question-text-area');
     var questionDateArea = document.getElementById('question-date-area');
     var rerollArea = document.getElementById('reroll-area');
