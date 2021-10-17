@@ -1,0 +1,14 @@
+{
+  "name": "icebreaker.figureandsound.com",
+  "version": "1.0.0",
+  "description": "Daily icebreaker questions for teams",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "David VanDusen",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="noindex" />
+  <meta content="initial-scale=1, width=device-width" />
+  <title>Daily Icebreaker Questions</title>
+</head>
+<body>
+<noscript>
+  <aside>
+    <p>This website uses JavaScript in order to select a random daily icebreaker question. JavaScript is not available in this web browser, so the program won’t work.</p>
+  </aside>
+</noscript>
+<main>
+  <header>
+    <h1>Break the ice!</h1>
+  </header>
+  <section>
+    <div id="question-date-area"></div>
+    <div id="question-text-area"></div>
+    <div id="reroll-area">
+      <p>Want a different question?</p>
+      <p>
+        <button id="reroll-button">Reroll</button>
+      </p>
+    </div>
+  </section>
+  <section>
+    <h2>Customize</h2>
+    <fieldset>
+      <legend>For Your Team Only</legend>
+      <p>
+        <label for="team-name-input">What is your team’s name?</label>
+      </p>
+      <p>
+        <input id="team-name-input" />
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>Don’t Miss Juicy Questions</legend>
+      <p>Which days do you need questions for?</p>
+      <ol>
+        <li><label> <input id="sunday-input" type="checkbox" /> Sundays </label>
+        </li>
+        <li><label> <input id="monday-input" type="checkbox" /> Mondays </label>
+        </li>
+        <li><label> <input id="tuesday-input" type="checkbox" /> Tuesdays
+        </label></li>
+        <li><label> <input id="wednesday-input" type="checkbox" /> Wednesdays
+        </label></li>
+        <li><label> <input id="thursday-input" type="checkbox" /> Thursdays
+        </label></li>
+        <li><label> <input id="friday-input" type="checkbox" /> Fridays </label>
+        </li>
+        <li><label> <input id="saturday-input" type="checkbox" /> Saturdays
+        </label></li>
+      </ol>
+    </fieldset>
+    <div id="custom-url-area">
+      <h3>Share your customization</h3>
+      <p><a href="" id="custom-url-link"></a></p>
+    </div>
+  </section>
+  <section>
+    <h2>Time machine</h2>
+    <p>
+      <label for="timetravel-date-input">Which date do you want to see the question for?</label>
+    </p>
+    <p>
+      <input id="timetravel-date-input" type="date" />
+    </p>
+    <p>
+      <button id="timetravel-button">Time Travel</button>
+    </p>
+  </section>
+  <footer>
+    <p><small>Made by David VanDusen</small></p>
+  </footer>
+</main>
+<script>
+  (function () {
+    var numberOfQuestions = 121;
+    var questionTextArea = document.getElementById('question-text-area');
+    var questionDateArea = document.getElementById('question-date-area');
+    var rerollArea = document.getElementById('reroll-area');
+    var rerollButton = document.getElementById('reroll-button');
+    var customURLArea = document.getElementById('custom-url-area');
+    var customURLLink = document.getElementById('custom-url-link');
+    var teamNameInput = document.getElementById('team-name-input');
+    var dayInputs = [
+      document.getElementById('sunday-input'),
+      document.getElementById('monday-input'),
+      document.getElementById('tuesday-input'),
+      document.getElementById('wednesday-input'),
+      document.getElementById('thursday-input'),
+      document.getElementById('friday-input'),
+      document.getElementById('saturday-input')
+    ];
+    var timetravelDateInput = document.getElementById('timetravel-date-input');
+    var timetravelButton = document.getElementById('timetravel-button');
+    var dayNames = [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday'
+    ];
+    var teamNameWord1 = [
+      'acrobatic', 'adorable', 'adventurous', 'brave', 'bright', 'brilliant',
+      'concrete', 'conventional', 'delirious', 'foolhardy', 'gregarious',
+      'handsome', 'handy', 'intelligent', 'intrepid', 'joyful', 'jubilant',
+      'keen', 'lanky', 'luxurious', 'mellow', 'nocturnal', 'ornate', 'ordinary',
+      'practical', 'precious', 'questionable', 'quirky', 'radiant', 'rustic',
+      'sly', 'sophisticated', 'stunning', 'verdant', 'weathered'
+    ];
+    var teamNameWord2 = [
+      'aardvark', 'alligator', 'alpaca', 'anaconda', 'ant', 'antelope', 'ape',
+      'aphid', 'armadillo', 'asp', 'baboon', 'badger', 'barracuda', 'bass', 'bat',
+      'bear', 'beaver', 'bedbug', 'bee', 'beetle', 'bird', 'bison', 'bobcat',
+      'buffalo', 'butterfly', 'buzzard', 'camel', 'caribou', 'carp', 'cat',
+      'caterpillar', 'catfish', 'cheetah', 'chicken', 'chimpanzee', 'chipmunk',
+      'cobra', 'cod', 'condor', 'cougar', 'cow', 'coyote', 'crab', 'crane',
+      'cricket', 'crocodile', 'crow', 'cuckoo', 'deer', 'dinosaur', 'dog',
+      'dolphin', 'donkey', 'dove', 'dragonfly', 'duck', 'eagle', 'eel',
+      'elephant', 'emu', 'falcon', 'ferret', 'finch', 'fish', 'flamingo', 'flea',
+      'fly', 'fox', 'frog', 'goat', 'goose', 'gopher', 'gorilla', 'grasshopper',
+      'hamster', 'hare', 'hawk', 'hippopotamus', 'horse', 'hummingbird', 'husky',
+      'iguana', 'impala', 'kangaroo', 'ladybug', 'leopard', 'lion', 'lizard',
+      'llama', 'lobster', 'mongoose', 'monkey', 'moose', 'mosquito', 'moth',
+      'mouse', 'mule', 'octopus', 'orca', 'ostrich', 'otter', 'owl', 'ox',
+      'oyster', 'panda', 'parrot', 'peacock', 'pelican', 'penguin', 'perch',
+      'pheasant', 'pig', 'pigeon', 'porcupine', 'quail', 'rabbit', 'raccoon',
+      'rat', 'rattlesnake', 'raven', 'rooster', 'sheep', 'shrew', 'skunk',
+      'snail', 'snake', 'spider', 'tiger', 'walrus', 'whale', 'wolf', 'zebra'
+    ];
+
+    function arrayOfSequentialIndices(length) {
+      var indices = new Array(length);
+      for (var i = 0; i < indices.length; i++) indices[i] = i;
+      return indices;
+    }
+
+    function sfc32(a, b, c, d) {
+      return function () {
+        a >>>= 0;
+        b >>>= 0;
+        c >>>= 0;
+        d >>>= 0;
+        var t = (a + b) | 0;
+        a = b ^ b >>> 9;
+        b = c + (c << 3) | 0;
+        c = (c << 21 | c >>> 11);
+        d = d + 1 | 0;
+        t = t + d | 0;
+        c = c + t | 0;
+        return (t >>> 0) / 4294967296;
+      }
+    }
+
+    function hashCode(str) {
+      var hash = 0;
+      if (str.length === 0) return hash;
+      for (var i = 0; i < str.length; i++) {
+        var charCode = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + charCode;
+        hash |= 0;
+      }
+      return hash;
+    }
+
+    function shuffle(array, seed) {
+      var rng = sfc32(seed, seed, seed, seed);
+      for (var i = array.length - 1; i > 0; i--) {
+        var rand = Math.floor(rng() * (i + 1));
+        var temp = array[i];
+        array[i] = array[rand];
+        array[rand] = temp;
+      }
+    }
+
+    function julianDay(date) {
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var dayOfMonth = date.getDate();
+      var a = year / 100;
+      var b = a / 4;
+      var c = 2 - a + b;
+      var d = 365.25 * (year + 4716);
+      var e = 30.6001 * (month + 1);
+      return Math.floor(c + dayOfMonth + d + e - 1524.5);
+    }
+
+    function loadQuestion(index, callback) {
+      var path = '/questions/' + index + '.txt';
+      var request = new XMLHttpRequest();
+      request.addEventListener('load', function () {
+        callback(this);
+      });
+      request.open('GET', path);
+      request.send();
+    }
+
+    function showQuestion(questionDays, questionDate, teamName, rollNumber) {
+      var dayOfWeek = questionDate.getDay();
+      if (questionDays.indexOf(dayOfWeek) === -1) {
+        rerollArea.style.visibility = 'hidden';
+        questionTextArea.innerHTML = 'No question on ' + dayNames[dayOfWeek] + '.';
+        questionDateArea.innerHTML = '&nbsp;';
+        return;
+      }
+      rerollArea.style.visibility = 'visible';
+      var questionIndices = arrayOfSequentialIndices(numberOfQuestions);
+      var rngSeed = hashCode(teamName + rollNumber + Math.PI);
+      shuffle(questionIndices, rngSeed);
+      var questionNumber = julianDay(questionDate);
+      var omittedDaysPerWeek = 7 - questionDays.length;
+      var numberOfWeeks = Math.floor(questionNumber / 7);
+      var omittedDaysThisWeek = dayOfWeek - questionDays.indexOf(dayOfWeek);
+      var omittedDays = (numberOfWeeks * omittedDaysPerWeek) + omittedDaysThisWeek;
+      var questionIndex = (questionNumber - omittedDays) % numberOfQuestions;
+      loadQuestion(questionIndices[questionIndex], function (response) {
+        if (response.status === 200) {
+          questionDateArea.innerHTML = questionDate.toDateString();
+          questionTextArea.innerHTML = response.responseText;
+        } else {
+          questionTextArea.innerHTML = 'There was an error getting a question.';
+          questionDateArea.innerHTML = '&nbsp;';
+        }
+      });
+    }
+
+    function showCustomURL(teamName, questionDays) {
+      if (!teamName.length || !questionDays.length) {
+        customURLArea.style.display = 'none';
+        return;
+      }
+      customURLArea.style.display = 'block';
+      var teamNamePath = encodeURIComponent(teamName);
+      var questionDaysPath = '';
+      for (var i = 0; i < questionDays.length; i++) {
+        questionDaysPath += questionDays[i];
+      }
+      var path = '/q/' + teamNamePath + '/' + questionDaysPath;
+      var url = 'https://icebreaker.figureandsound.com' + path;
+      customURLLink.href = url;
+      customURLLink.innerHTML = url;
+      history.replaceState(null, null, path);
+    }
+
+    function showStateInInputs(teamName, questionDays, questionDate) {
+      teamNameInput.value = teamName;
+      timetravelDateInput.value = questionDate.toISOString().substr(0, 10);
+      for (var i = 0; i < 7; i++) {
+        if (questionDays.indexOf(i) === -1) {
+          delete dayInputs[i].checked;
+        } else {
+          dayInputs[i].checked = 'checked';
+        }
+      }
+    }
+
+    function randomTeamName() {
+      return teamNameWord1[Math.floor(Math.random() * teamNameWord1.length)] + '-'
+        + teamNameWord2[Math.floor(Math.random() * teamNameWord2.length)];
+    }
+
+    function main() {
+      var pathParts = location.pathname.split('/');
+      var rollNumber = 0;
+      var questionDate = new Date;
+      questionDate.setHours(0);
+      questionDate.setMinutes(0);
+      questionDate.setSeconds(0);
+      questionDate.setMilliseconds(0);
+      var defaultQuestionDays = [1, 2, 3, 4, 5];
+      var questionDays = [];
+      var rawQuestionDays = typeof pathParts[3] === 'string' ?
+        pathParts[3].replace(/[^0-6]+/g, '').split('') : defaultQuestionDays;
+      for (var rawDayIdx = 0; rawDayIdx < rawQuestionDays.length; rawDayIdx++) {
+        var numericDay = Number(rawQuestionDays[rawDayIdx]);
+        if (questionDays.indexOf(numericDay) === -1)
+          questionDays.push(numericDay);
+      }
+      questionDays.sort();
+      var teamName = typeof pathParts[2] === 'string' ?
+        decodeURIComponent(pathParts[2]) : randomTeamName();
+      showStateInInputs(teamName, questionDays, questionDate);
+      showQuestion(questionDays, questionDate, teamName, rollNumber);
+      showCustomURL(teamName, questionDays);
+      for (var i = 0; i < dayInputs.length; i++) {
+        dayInputs[i].addEventListener('change', function () {
+          questionDays = [];
+          for (var j = 0; j < dayInputs.length; j++) {
+            if (dayInputs[j].checked) {
+              questionDays.push(j);
+            }
+          }
+          showQuestion(questionDays, questionDate, teamName, rollNumber);
+          showCustomURL(teamName, questionDays);
+        });
+      }
+      teamNameInput
+        .addEventListener('input', function (event) {
+          teamName = event.target.value;
+          rollNumber = 0;
+          showQuestion(questionDays, questionDate, teamName, rollNumber);
+          showCustomURL(teamName, questionDays);
+        });
+      rerollButton
+        .addEventListener('click', function () {
+          rollNumber = rollNumber + 1;
+          showQuestion(questionDays, questionDate, teamName, rollNumber);
+        });
+      timetravelButton
+        .addEventListener('click', function () {
+          var dateValue = timetravelDateInput.value;
+          if (dateValue) {
+            questionDate = new Date(dateValue + 'T00:00:00.000');
+            rollNumber = 0;
+            showQuestion(questionDays, questionDate, teamName, rollNumber);
+          }
+        });
+    }
+
+    main();
+  })();
+</script>
+</body>
+</html>
