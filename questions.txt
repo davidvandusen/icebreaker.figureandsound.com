@@ -76,7 +76,7 @@ Do you like the taste of cilantro?
 What are two questions you wish you knew your pet’s answers to?
 What is the easiest meal to cook?
 How do you cope with stressful environments?
-What are quotations people often reference that you disagree with?
+What is a quotation that people often reference that you disagree with?
 What was the most flattering compliment you received?
 If you had to change your name, what would your new name be?
 Do you usually think things through or go with your gut?
@@ -143,14 +143,13 @@ What is the strangest Halloween costume you have worn?
 What do you miss about being a kid?
 How do you inspire other people?
 Is there a song that describes your life right now?
-Where do you see yourself in the next five years?
+Where do you see yourself in five years?
 What make of car do you like the most?
 What would you do if you had to change professions?
 Do you like to exercise regularly?
 What is the worst food you remember eating?
 What is your most cherished possession?
 What is the most valuable lesson you’ve learned in life?
-What is something that makes you angry?
 If you were a pair of shoes, what brand would you like to be?
 What is your dream job?
 Do you keep secrets from your parents?
@@ -178,3 +177,55 @@ What musical instruments can you play?
 What would you do if you became lost in a city that you aren’t familiar with?
 How old were you when you first got your own phone?
 Can you name five things that are lost or hidden in your bedroom?
+How do you feel about answering icebreaker questions?
+What is a word that you wish everyone knew?
+What is the first movie you would make if you were a filmmaker?
+Which member of your family were you closest to as a child?
+If you could be really good at a sport, which sport would you choose?
+Do you think of yourself as creative?
+Do you know how to change a flat tire?
+What genre would you write if you were an author?
+Do you consider yourself as impulsive?
+Who is your favourite superhero?
+Who do you think is your celebrity look-a-like?
+If you got turned into a plant, what kind of plant would you want to be?
+What was the last thing you ate?
+What was something you really wanted to do as a kid but never had the opportunity to do?
+Do you know any funny pick-up lines?
+What is your least favourite board game?
+Would you like to be famous someday?
+What are your favourite fast food restaurants?
+Would you rather play a hero or a villain in a movie?
+What is something that people tend to misunderstand about you?
+Are you a collector of something?
+What is your lucky number?
+Have you recently checked off an item from your bucket list?
+What is your most-used emoji?
+Have you ever borrowed something from a friend and failed to return it?
+How do you feel about eating food that has fallen on the floor?
+What is your favourite indoor activity?
+What is your favourite outdoor activity?
+Do you get bored easily?
+If you could stay one age for the rest of your life, what age would you choose?
+What is a popular food ingredient, spice, or herb that you dislike?
+What are the things that take up too much of your time?
+How do you feel about clowns?
+What would you do with the extra hour if there were 25 hours in a day?
+What is your favourite sandwich spread?
+Do you prefer to fix things yourself, or get an expert to fix things for you?
+What time do you usually go to bed?
+What time do you usually wake up?
+Do you wake up naturally or use an alarm clock?
+How many pairs of shoes do you own?
+Would you rather visit your ancestors in the past or meet your descendants in the future?
+Would you ever spend a hundred dollars on a meal for yourself?
+Do you keep any houseplants?
+Do you have a green thumb?
+What uncommon item do you have on your desk?
+Have you learned anything new today?
+What has been the longest time you had to wait for someone?
+What season best fits your personality?
+How do you feel about garden gnomes or pink flamingos?
+What is the longest plane trip you’ve taken?
+What is the most severe weather event you’ve experienced?
+What habits are preventing you from achieving your goals?
