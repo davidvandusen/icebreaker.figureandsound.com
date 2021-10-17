@@ -349,7 +349,7 @@
       questionDate.setMinutes(0);
       questionDate.setSeconds(0);
       questionDate.setMilliseconds(0);
-      var defaultQuestionDays = [1, 2, 3, 4, 5];
+      var defaultQuestionDays = [0, 1, 2, 3, 4, 5, 6];
       var questionDays = [];
       var rawQuestionDays = typeof pathParts[3] === 'string' ?
         pathParts[3].replace(/[^0-6]+/g, '').split('') : defaultQuestionDays;
