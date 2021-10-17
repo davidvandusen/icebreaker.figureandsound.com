@@ -2,71 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta content="noindex" />
-  <meta content="initial-scale=1, width=device-width" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
   <title>Daily Icebreaker Questions</title>
+  <style>
+    html {
+      font-size: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+    }
+
+    button {
+      background: #d8d8d8;
+      border: 0 none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    button:hover {
+      background: #e8e8e8;
+    }
+
+    input {
+      background: #fff;
+      border: 1px solid #c8c8c8;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    h1, h2, h3 {
+      font-size: 1rem;
+    }
+
+    h1 {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin-top: 3rem;
+    }
+
+    .page {
+      margin: 0 auto;
+      max-width: 960px;
+      padding: 2rem;
+    }
+
+    .question-section {
+      padding: 5rem 0;
+    }
+
+    .question-date {
+      text-transform: uppercase;
+    }
+
+    .question-text {
+      font-size: 4rem;
+      font-weight: 300;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .question-text {
+        font-size: 2rem;
+      }
+    }
+
+    .customize-section {
+      padding: 5rem 0;
+    }
+
+    .url {
+      word-break: break-all;
+    }
+
+    .date-section {
+      padding: 5rem 0;
+    }
+
+    .page-footer {
+      padding: 5rem 0;
+    }
+  </style>
 </head>
 <body>
-<noscript>
-  <aside>
-    <p>This website uses JavaScript in order to select a random daily icebreaker question. JavaScript is not available in this web browser, so the program won’t work.</p>
-  </aside>
-</noscript>
-<main>
-  <header>
+<main class="page">
+  <header class="page-header">
     <h1>Break the ice!</h1>
+    <noscript>
+      <aside>
+        <p>This website uses JavaScript in order to select a random daily icebreaker question. JavaScript is not available in this web browser, so the program won’t work.</p>
+      </aside>
+    </noscript>
   </header>
-  <section>
-    <div id="question-date-area"></div>
-    <div id="question-text-area"></div>
-    <div id="reroll-area">
-      <p>Want a different question?</p>
+  <section class="question-section">
+    <div id="question-date-area" class="question-date"></div>
+    <div id="question-text-area" class="question-text"></div>
+    <div id="reroll-area" class="reroll-section">
+      <h3>Want a different question?</h3>
       <p>
         <button id="reroll-button">Reroll</button>
       </p>
     </div>
   </section>
-  <section>
+  <section class="customize-section">
     <h2>Customize</h2>
-    <fieldset>
-      <legend>For Your Team Only</legend>
-      <p>
-        <label for="team-name-input">What is your team’s name?</label>
-      </p>
-      <p>
-        <input id="team-name-input" />
-      </p>
-    </fieldset>
-    <fieldset>
-      <legend>Don’t Miss Juicy Questions</legend>
-      <p>Which days do you need questions for?</p>
-      <ol>
-        <li><label> <input id="sunday-input" type="checkbox" /> Sundays </label>
-        </li>
-        <li><label> <input id="monday-input" type="checkbox" /> Mondays </label>
-        </li>
-        <li><label> <input id="tuesday-input" type="checkbox" /> Tuesdays
-        </label></li>
-        <li><label> <input id="wednesday-input" type="checkbox" /> Wednesdays
-        </label></li>
-        <li><label> <input id="thursday-input" type="checkbox" /> Thursdays
-        </label></li>
-        <li><label> <input id="friday-input" type="checkbox" /> Fridays </label>
-        </li>
-        <li><label> <input id="saturday-input" type="checkbox" /> Saturdays
-        </label></li>
-      </ol>
-    </fieldset>
+    <h3>
+      <label for="team-name-input">What is your team’s name?</label>
+    </h3>
+    <p>
+      <input id="team-name-input" />
+    </p>
+    <h3>Which days do you need questions for?</h3>
+    <ol>
+      <li><label><input id="sunday-input" type="checkbox" /> Sundays</label></li>
+      <li><label><input id="monday-input" type="checkbox" /> Mondays</label></li>
+      <li><label><input id="tuesday-input" type="checkbox" /> Tuesdays</label></li>
+      <li><label><input id="wednesday-input" type="checkbox" /> Wednesdays</label></li>
+      <li><label><input id="thursday-input" type="checkbox" /> Thursdays</label></li>
+      <li><label><input id="friday-input" type="checkbox" /> Fridays </label></li>
+      <li><label><input id="saturday-input" type="checkbox" /> Saturdays</label></li>
+    </ol>
     <div id="custom-url-area">
       <h3>Share your customization</h3>
-      <p><a href="" id="custom-url-link"></a></p>
+      <p><a href="" id="custom-url-link" class="url"></a></p>
     </div>
   </section>
-  <section>
+  <section class="date-section">
     <h2>Time machine</h2>
-    <p>
+    <h3>
       <label for="timetravel-date-input">Which date do you want to see the question for?</label>
-    </p>
+    </h3>
     <p>
       <input id="timetravel-date-input" type="date" />
     </p>
@@ -74,7 +148,7 @@
       <button id="timetravel-button">Time Travel</button>
     </p>
   </section>
-  <footer>
+  <footer class="page-footer">
     <p><small>Made by David VanDusen</small></p>
   </footer>
 </main>
@@ -100,41 +174,37 @@
     var timetravelDateInput = document.getElementById('timetravel-date-input');
     var timetravelButton = document.getElementById('timetravel-button');
     var dayNames = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
+      'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
       'Saturday'
     ];
     var teamNameWord1 = [
       'acrobatic', 'adorable', 'adventurous', 'brave', 'bright', 'brilliant',
-      'concrete', 'conventional', 'delirious', 'foolhardy', 'gregarious',
-      'handsome', 'handy', 'intelligent', 'intrepid', 'joyful', 'jubilant',
-      'keen', 'lanky', 'luxurious', 'mellow', 'nocturnal', 'ornate', 'ordinary',
-      'practical', 'precious', 'questionable', 'quirky', 'radiant', 'rustic',
-      'sly', 'sophisticated', 'stunning', 'verdant', 'weathered'
+      'concrete', 'conventional', 'delirious', 'gregarious', 'handsome',
+      'handy', 'intelligent', 'intrepid', 'joyful', 'jubilant', 'keen', 'lanky',
+      'luxurious', 'mellow', 'nocturnal', 'ornate', 'ordinary', 'practical',
+      'precious', 'quirky', 'radiant', 'rustic', 'sly', 'sophisticated',
+      'stunning', 'verdant'
     ];
     var teamNameWord2 = [
       'aardvark', 'alligator', 'alpaca', 'anaconda', 'ant', 'antelope', 'ape',
-      'aphid', 'armadillo', 'asp', 'baboon', 'badger', 'barracuda', 'bass', 'bat',
-      'bear', 'beaver', 'bedbug', 'bee', 'beetle', 'bird', 'bison', 'bobcat',
-      'buffalo', 'butterfly', 'buzzard', 'camel', 'caribou', 'carp', 'cat',
-      'caterpillar', 'catfish', 'cheetah', 'chicken', 'chimpanzee', 'chipmunk',
-      'cobra', 'cod', 'condor', 'cougar', 'cow', 'coyote', 'crab', 'crane',
-      'cricket', 'crocodile', 'crow', 'cuckoo', 'deer', 'dinosaur', 'dog',
-      'dolphin', 'donkey', 'dove', 'dragonfly', 'duck', 'eagle', 'eel',
-      'elephant', 'emu', 'falcon', 'ferret', 'finch', 'fish', 'flamingo', 'flea',
-      'fly', 'fox', 'frog', 'goat', 'goose', 'gopher', 'gorilla', 'grasshopper',
-      'hamster', 'hare', 'hawk', 'hippopotamus', 'horse', 'hummingbird', 'husky',
-      'iguana', 'impala', 'kangaroo', 'ladybug', 'leopard', 'lion', 'lizard',
-      'llama', 'lobster', 'mongoose', 'monkey', 'moose', 'mosquito', 'moth',
-      'mouse', 'mule', 'octopus', 'orca', 'ostrich', 'otter', 'owl', 'ox',
-      'oyster', 'panda', 'parrot', 'peacock', 'pelican', 'penguin', 'perch',
-      'pheasant', 'pig', 'pigeon', 'porcupine', 'quail', 'rabbit', 'raccoon',
-      'rat', 'rattlesnake', 'raven', 'rooster', 'sheep', 'shrew', 'skunk',
-      'snail', 'snake', 'spider', 'tiger', 'walrus', 'whale', 'wolf', 'zebra'
+      'aphid', 'armadillo', 'asp', 'baboon', 'badger', 'barracuda', 'bass',
+      'bat', 'bear', 'beaver', 'bedbug', 'bee', 'beetle', 'bird', 'bison',
+      'bobcat', 'buffalo', 'butterfly', 'buzzard', 'camel', 'caribou', 'carp',
+      'cat', 'caterpillar', 'catfish', 'cheetah', 'chicken', 'chimpanzee',
+      'chipmunk', 'cobra', 'cod', 'condor', 'cougar', 'cow', 'coyote', 'crab',
+      'crane', 'cricket', 'crocodile', 'crow', 'cuckoo', 'deer', 'dinosaur',
+      'dog', 'dolphin', 'donkey', 'dove', 'dragonfly', 'duck', 'eagle', 'eel',
+      'elephant', 'emu', 'falcon', 'ferret', 'finch', 'fish', 'flamingo',
+      'flea', 'fly', 'fox', 'frog', 'goat', 'goose', 'gopher', 'gorilla',
+      'grasshopper', 'hamster', 'hare', 'hawk', 'hippopotamus', 'horse',
+      'hummingbird', 'husky', 'iguana', 'impala', 'kangaroo', 'ladybug',
+      'leopard', 'lion', 'lizard', 'llama', 'lobster', 'mongoose', 'monkey',
+      'moose', 'mosquito', 'moth', 'mouse', 'mule', 'octopus', 'orca',
+      'ostrich', 'otter', 'owl', 'ox', 'oyster', 'panda', 'parrot', 'peacock',
+      'pelican', 'penguin', 'perch', 'pheasant', 'pig', 'pigeon', 'porcupine',
+      'quail', 'rabbit', 'raccoon', 'rat', 'rattlesnake', 'raven', 'rooster',
+      'sheep', 'shrew', 'skunk', 'snail', 'snake', 'spider', 'tiger', 'walrus',
+      'whale', 'wolf', 'zebra'
     ];
 
     function arrayOfSequentialIndices(length) {
@@ -321,6 +391,7 @@
             questionDate = new Date(dateValue + 'T00:00:00.000');
             rollNumber = 0;
             showQuestion(questionDays, questionDate, teamName, rollNumber);
+            window.scrollTo(0, 0);
           }
         });
     }
