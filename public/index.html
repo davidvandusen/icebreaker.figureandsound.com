@@ -283,6 +283,20 @@
       return Math.floor(c + dayOfMonth + d + e - 1524.5);
     }
 
+    function debounce(func, timeout){
+      var timer;
+      return function () {
+        var args = Array.prototype.slice.call(arguments);
+        clearTimeout(timer);
+        timer = setTimeout(
+          function () {
+            func.apply(this, args);
+          },
+          timeout || 300
+        );
+      };
+    }
+
     function loadQuestion(index, callback) {
       var path = '/questions/' + index + '.txt';
       var request = new XMLHttpRequest();
@@ -393,12 +407,12 @@
         });
       }
       teamNameInput
-        .addEventListener('input', function (event) {
+        .addEventListener('input', debounce(function (event) {
           teamName = event.target.value;
           rollNumber = 0;
           showQuestion(questionDays, questionDate, teamName, rollNumber);
           showCustomURL(teamName, questionDays);
-        });
+        }));
       rerollButton
         .addEventListener('click', function () {
           rollNumber = rollNumber + 1;
